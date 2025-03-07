@@ -1,19 +1,13 @@
-module github.com/DavidMovas/SpeakUp-Client
+module project-name
 
 go 1.24.1
 
-require (
-	github.com/wailsapp/wails/v2 v2.10.1
-	google.golang.org/protobuf v1.36.4
-)
-
-require google.golang.org/genproto/googleapis/rpc v0.0.0-20250115164207-1a7da9e5054f // indirect
+require github.com/wailsapp/wails/v2 v2.10.1
 
 require (
 	github.com/bep/debounce v1.2.1 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
-	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/jchv/go-winloader v0.0.0-20210711035445-715c2860da7e // indirect
 	github.com/labstack/echo/v4 v4.13.3 // indirect
@@ -37,7 +31,6 @@ require (
 	golang.org/x/net v0.35.0 // indirect
 	golang.org/x/sys v0.30.0 // indirect
 	golang.org/x/text v0.22.0 // indirect
-	google.golang.org/grpc v1.71.0
 )
 
 // replace github.com/wailsapp/wails/v2 v2.10.1 => C:\Users\admin\go\pkg\mod
