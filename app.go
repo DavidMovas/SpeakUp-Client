@@ -2,17 +2,29 @@ package main
 
 import (
 	"context"
-	"fmt"
+	"github.com/DavidMovas/SpeakUp-Server/backend/config"
+	"github.com/DavidMovas/SpeakUp-Server/backend/server"
 )
 
 // App struct
 type App struct {
-	ctx context.Context
+	ctx    context.Context
+	server *server.Server
 }
 
 // NewApp creates a new App application struct
 func NewApp() *App {
-	return &App{}
+	ctx := context.Background()
+
+	srv, err := server.NewServer(ctx, config.AppConfig)
+	if err != nil {
+		panic(err)
+	}
+
+	return &App{
+		ctx:    ctx,
+		server: srv,
+	}
 }
 
 // startup is called at application startup
@@ -36,9 +48,5 @@ func (a *App) beforeClose(ctx context.Context) (prevent bool) {
 // shutdown is called at application termination
 func (a *App) shutdown(ctx context.Context) {
 	// Perform your teardown here
-}
-
-// Greet returns a greeting for the given name
-func (a *App) Greet(name string) string {
-	return fmt.Sprintf("Hello %s, It's show time!", name)
+	_ = a.server.Stop()
 }

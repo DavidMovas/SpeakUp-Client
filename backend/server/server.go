@@ -6,6 +6,7 @@ import (
 	"github.com/DavidMovas/SpeakUp-Server/backend/config"
 	"github.com/DavidMovas/SpeakUp-Server/backend/handlers"
 	v1 "github.com/DavidMovas/SpeakUp-Server/backend/shared/grpc/v1"
+	"github.com/DavidMovas/SpeakUp-Server/backend/utils/helpers"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -16,7 +17,7 @@ type Server struct {
 	closers      []func() error
 }
 
-func NewServer(ctx context.Context, cfg *config.Config) (*Server, error) {
+func NewServer(_ context.Context, cfg *config.Config) (*Server, error) {
 	var closers []func() error
 
 	conn, err := grpc.NewClient(cfg.APIServerTCPURL, grpc.WithTransportCredentials(insecure.NewCredentials()))
@@ -26,14 +27,17 @@ func NewServer(ctx context.Context, cfg *config.Config) (*Server, error) {
 
 	closers = append(closers, conn.Close)
 
-	v1.NewUsersServiceClient(conn)
+	usersClient := v1.NewUsersServiceClient(conn)
+
+	usersHandler := handlers.NewUsersHandler(usersClient)
 
 	return &Server{
-		cfg:     cfg,
-		closers: closers,
+		UsersHandler: usersHandler,
+		cfg:          cfg,
+		closers:      closers,
 	}, nil
 }
 
-func (s *Server) Close() error {
-	return
+func (s *Server) Stop() error {
+	return helpers.WithClosers(s.closers, nil)
 }
