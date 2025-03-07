@@ -1,14 +1,20 @@
-import { LoginForm } from "@/components/login-form.tsx";
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import { lazy, Suspense } from "react";
+
+const LoginPage = lazy(() => import('./pages/LoginPage'))
+const SigUpPage = lazy(() => import('./pages/SignupPage'))
 
 function App() {
     return (
-        <div className="light">
-            <div className="flex min-h-svh flex-col items-center justify-center bg-muted p-6 md:p-10">
-                <div className="w-full h-max max-w-sm md:max-w-3xl">
-                    <LoginForm/>
-                </div>
-            </div>
-        </div>
+        <HashRouter basename={"/"}>
+            <div className="end-0 bottom-0 absolute">v0.0.1</div>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+                    <Route path="/" element={<LoginPage />}></Route>
+                    <Route path="/signup" element={<SigUpPage />}></Route>
+                </Routes>
+            </Suspense>
+        </HashRouter>
     )
 }
 
