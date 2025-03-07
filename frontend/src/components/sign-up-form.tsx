@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/Button/button.tsx"
+import { Card, CardContent } from "@/components/ui/Card/card.tsx"
+import { Input } from "@/components/ui/Input/input.tsx"
+import { Label } from "@/components/ui/Label/label.tsx"
 
 export function SignUpForm({
   className,
