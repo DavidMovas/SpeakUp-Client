@@ -1,8 +1,12 @@
-module project-name
+module github.com/DavidMovas/SpeakUp-Server
 
 go 1.24.1
 
-require github.com/wailsapp/wails/v2 v2.10.1
+require (
+	github.com/wailsapp/wails/v2 v2.10.1
+	google.golang.org/grpc v1.71.0
+	google.golang.org/protobuf v1.36.5
+)
 
 require (
 	github.com/bep/debounce v1.2.1 // indirect
@@ -27,10 +31,11 @@ require (
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	github.com/wailsapp/go-webview2 v1.0.19 // indirect
 	github.com/wailsapp/mimetype v1.4.1 // indirect
-	golang.org/x/crypto v0.33.0 // indirect
-	golang.org/x/net v0.35.0 // indirect
-	golang.org/x/sys v0.30.0 // indirect
-	golang.org/x/text v0.22.0 // indirect
+	golang.org/x/crypto v0.36.0 // indirect
+	golang.org/x/net v0.37.0 // indirect
+	golang.org/x/sys v0.31.0 // indirect
+	golang.org/x/text v0.23.0 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20250303144028-a0af3efb3deb // indirect
 )
 
 // replace github.com/wailsapp/wails/v2 v2.10.1 => C:\Users\admin\go\pkg\mod
