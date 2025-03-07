@@ -1,18 +1,29 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils.ts"
 import { Button } from "@/components/ui/Button/button.tsx"
 import { Card, CardContent } from "@/components/ui/Card/card.tsx"
 import { Input } from "@/components/ui/Input/input.tsx"
 import { Label } from "@/components/ui/Label/label.tsx"
+import React, { useState } from "react";
+import { LogPrint } from "../../../../wailsjs/runtime";
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    LogPrint(email + ' '+ password + ' submitted')
+  };
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden">
         <CardContent className="flex justify-center">
-          <form className="p-6 md:p-8">
+          <form className="p-6 md:p-8" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Welcome back</h1>
@@ -26,6 +37,7 @@ export function LoginForm({
                   id="email"
                   type="email"
                   placeholder="mail@example.com"
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -38,7 +50,10 @@ export function LoginForm({
                     Forgot your password?
                   </a>
                 </div>
-                <Input id="password" type="password" required />
+                <Input
+                    id="password"
+                    type="password" required
+                    onChange={(e) => setPassword(e.target.value)}/>
               </div>
               <Button type="submit" className="w-full">
                 Login

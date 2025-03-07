@@ -34,7 +34,7 @@ func (h *UsersHandler) RegisterUser(fullName, email, password string) (*models.R
 			Email:    response.User.Email,
 			Username: response.User.Username,
 			FullName: response.User.FullName,
-			CreateAt: response.User.CreatedAt.AsTime(),
+			CreateAt: response.User.CreatedAt.String(),
 		},
 	}
 

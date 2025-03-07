@@ -8,7 +8,7 @@ const SigUpPage = lazy(() => import('./pages/SignupPage'))
 function App() {
     return (
         <HashRouter basename={"/"}>
-            <Version version={"0.0.1"}/>
+            <Version version={"0.0.1-alpha"}/>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
                     <Route path="/" element={<LoginPage />}></Route>
