@@ -1,5 +1,6 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from "react";
+import { Version } from "@/components/ui/Version/Version.tsx";
 
 const LoginPage = lazy(() => import('./pages/LoginPage'))
 const SigUpPage = lazy(() => import('./pages/SignupPage'))
@@ -7,7 +8,7 @@ const SigUpPage = lazy(() => import('./pages/SignupPage'))
 function App() {
     return (
         <HashRouter basename={"/"}>
-            <div className="end-0 bottom-0 absolute">v0.0.1</div>
+            <Version version={"0.0.1"}/>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
                     <Route path="/" element={<LoginPage />}></Route>
