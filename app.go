@@ -48,5 +48,7 @@ func (a *App) beforeClose(ctx context.Context) (prevent bool) {
 // shutdown is called at application termination
 func (a *App) shutdown(ctx context.Context) {
 	// Perform your teardown here
+	a.ctx.Done()
+	ctx.Done()
 	_ = a.server.Stop()
 }
