@@ -16,7 +16,6 @@ const registerProfile = async (
         }
 
         if (response.user) {
-
             saveProfile({
                 id: response.user.id,
                 email: response.user.email,

@@ -35,7 +35,10 @@ export function SignUpForm({
 
     try {
       await registerProfile(name, email, password,saveProfile, saveToken)
-      toast.success("Registration successful")
+      setName("");
+      setEmail("");
+      setPassword("");
+      toast.success("Registration successful");
     } catch (err) {
       const error = formatError(err as string)
       if (error.code === Code.ALREADY_EXISTS) {

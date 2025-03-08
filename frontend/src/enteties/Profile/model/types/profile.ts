@@ -5,9 +5,11 @@ export interface Profile {
     email: string
     username: string
     fullName: string
-    bio: string | null
+    bio?: string
     avatarUrl?: string
+    lastLoginAt?: Date
     createdAt: Date
+    updatedAt?: Date;
 }
 
 export interface ProfileStore {

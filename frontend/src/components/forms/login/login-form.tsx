@@ -4,9 +4,14 @@ import { Card, CardContent } from "@/components/ui/Card/card.tsx"
 import { Input } from "@/components/ui/Input/input.tsx"
 import { Label } from "@/components/ui/Label/label.tsx"
 import React, { useState } from "react";
-import { LogPrint } from "../../../../wailsjs/runtime";
 import { AuthPageProps } from "@/pages/AuthPage.tsx";
 import { motion } from 'framer-motion';
+import useProfileStore from "@/enteties/Profile/model/store/profileStore.ts";
+import useTokenStore from "@/enteties/Token/model/store/tokenStore.ts";
+import { toast } from "sonner";
+import { formatError } from "@/enteties/Error/model/slice/helpers.ts";
+import { Code } from "@/enteties/Error/model/types/error.ts";
+import loginProfile from "@/enteties/Profile/model/service/loginProfile.ts";
 
 export function LoginForm({
   className,
@@ -18,14 +23,32 @@ export function LoginForm({
     setLogin(false);
   }
 
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
+  const saveProfile = useProfileStore((state) => state.saveProfile);
+  const saveToken = useTokenStore((state)=> state.saveToken);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    LogPrint(email + ' '+ password + ' submitted')
-  };
+    try {
+      await loginProfile(email, password,saveProfile, saveToken)
+      setEmail("");
+      setPassword("");
+      toast.success("Login successful");
+    } catch (err) {
+      const error = formatError(err as string)
+      if (error.code === Code.NOT_FOUND) {
+        toast.error("User with the specified email not found")
+      } else if (error.code === Code.INVALID_ARGUMENT) {
+        toast.error("Wrong password")
+      } else {
+        toast.error(`Registration failed\n ${formatError(err as string).message}`)
+      }
+    }
+  }
 
   return (
       <motion.div
@@ -37,7 +60,7 @@ export function LoginForm({
         <div className={cn("flex flex-col gap-6", className)} {...props}>
           <Card className="overflow-hidden">
             <CardContent className="flex justify-center">
-              <form className="w-7/12 p-6 md:p-8" onSubmit={handleSubmit}>
+              <form className="w-7/12 p-6 md:p-8" onSubmit={onSubmit}>
                 <div className="flex flex-col gap-6">
                   <div className="flex flex-col items-center text-center">
                     <h1 className="text-2xl font-bold">Welcome back</h1>
@@ -98,7 +121,7 @@ export function LoginForm({
                   </div>
                   <div className="text-center text-sm">
                     Don&apos;t have an account?{" "}
-                    <a href="#/signup" onClick={setLoginHandle} className="underline underline-offset-4">
+                    <a href="#/" onClick={setLoginHandle} className="underline underline-offset-4">
                       Sign up
                     </a>
                   </div>
