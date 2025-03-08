@@ -42,7 +42,7 @@ export function SignUpForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden">
         <CardContent className="flex justify-center">
-          <form className="p-6 md:p-8" onSubmit={onSubmit}>
+          <form className="w-7/12 p-6 md:p-8" onSubmit={onSubmit}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Welcome to SpeakUp</h1>
