@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="added zustand for sessions storing">
-      <change afterPath="$PROJECT_DIR$/backend/utils/error/error.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Error/model/slice/helpers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Error/model/types/error.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Profile/model/service/registerProfile.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Profile/model/store/profileStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Profile/model/types/profile.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Token/model/store/tokenStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Token/model/types/token.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/handlers/users.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/users.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/responses.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/responses.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/authStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/userStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +127,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741367140071</updated>
       <workItem from="1741367144194" duration="11413000" />
-      <workItem from="1741379232947" duration="27257000" />
+      <workItem from="1741379232947" duration="27709000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -199,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741393637426</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added custom error, typed, slices for errors, token and profile, updated logic for registration">
+      <option name="closed" value="true" />
+      <created>1741408043192</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741408043192</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +205,8 @@
     <MESSAGE value="ui components replaced" />
     <MESSAGE value="added zustand for sessions storing" />
     <MESSAGE value="added sonner for events" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sonner for events" />
+    <MESSAGE value="added custom error, typed, slices for errors, token and profile, updated logic for registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="added custom error, typed, slices for errors, token and profile, updated logic for registration" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

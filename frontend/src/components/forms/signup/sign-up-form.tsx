@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { toast } from "sonner";
 import registerProfile from "@/enteties/Profile/model/service/registerProfile.ts";
 import useTokenStore from "@/enteties/Token/model/store/tokenStore.ts";
-import { CustomError } from "@/enteties/Error/model/types/error.ts";
+import { Code, CustomError } from "@/enteties/Error/model/types/error.ts";
 import useProfileStore from "@/enteties/Profile/model/store/profileStore.ts";
 
 export function SignUpForm({
@@ -32,7 +32,14 @@ export function SignUpForm({
       toast.success("Successfully registered" + "\nUsername: " + username)
     } catch (err) {
       const error = err as CustomError
-      toast.error("Registration failed: " + error.message)
+      switch (error.code) {
+        case Code.ALREADY_EXISTS:
+         return  toast.error("User with the same email already exists")
+        case Code.INVALID_ARGUMENT:
+          return toast.error("Data is invalid")
+        default:
+          return toast.error("Server error")
+      }
     }
   }
 
