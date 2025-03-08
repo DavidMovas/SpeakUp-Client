@@ -4,8 +4,9 @@ import { Version } from "@/components/ui/Version/Version.tsx";
 import { Toaster } from "sonner";
 import useThemeStore from "@/enteties/Theme/store/themeStore.ts";
 
-const version = "0.0.1-alpha"
+const version = "0.0.2-alpha"
 
+const AuthPage = lazy(() => import('./pages/AuthPage'))
 const LoginPage = lazy(() => import('./pages/LoginPage'))
 const SigUpPage = lazy(() => import('./pages/SignupPage'))
 
@@ -19,7 +20,8 @@ function App() {
                 <Toaster />
                 <Suspense fallback={<div>Loading...</div>}>
                     <Routes>
-                        <Route path="/" element={<LoginPage />}></Route>
+                        <Route path="/" element={<AuthPage />}></Route>
+                        <Route path="/login" element={<LoginPage />}></Route>
                         <Route path="/signup" element={<SigUpPage />}></Route>
                     </Routes>
                 </Suspense>

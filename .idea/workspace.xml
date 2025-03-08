@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="rigiastration ligic adjusted">
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Theme/store/themeStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Theme/types/theme.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Theme/ui/ThemeToggle.tsx" afterDir="false" />
+    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="some refactoring">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/AuthPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/login/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/forms/login/login-form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/LoginPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SignupPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SignupPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/Version/Version.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/Version/Version.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +136,7 @@
       <updated>1741367140071</updated>
       <workItem from="1741367144194" duration="11413000" />
       <workItem from="1741379232947" duration="27755000" />
-      <workItem from="1741428298269" duration="13632000" />
+      <workItem from="1741428298269" duration="15777000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -218,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741438363788</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="some refactoring">
+      <option name="closed" value="true" />
+      <created>1741445063700</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741445063700</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +241,8 @@
     <MESSAGE value="added custom error, typed, slices for errors, token and profile, updated logic for registration" />
     <MESSAGE value="updated errors in signup form" />
     <MESSAGE value="rigiastration ligic adjusted" />
-    <option name="LAST_COMMIT_MESSAGE" value="rigiastration ligic adjusted" />
+    <MESSAGE value="some refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="some refactoring" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
