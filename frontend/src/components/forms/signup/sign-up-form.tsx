@@ -4,38 +4,35 @@ import { Card, CardContent } from "@/components/ui/Card/card.tsx"
 import { Input } from "@/components/ui/Input/input.tsx"
 import { Label } from "@/components/ui/Label/label.tsx"
 import React, { useState } from "react";
-import { RegisterUser } from "../../../../wailsjs/go/handlers/UsersHandler";
-import useAuthStore from "@/store/authStore.ts";
-import useUserStore from "@/store/userStore.ts";
 import { toast } from "sonner";
+import registerProfile from "@/enteties/Profile/model/service/registerProfile.ts";
+import useTokenStore from "@/enteties/Token/model/store/tokenStore.ts";
+import { CustomError } from "@/enteties/Error/model/types/error.ts";
+import useProfileStore from "@/enteties/Profile/model/store/profileStore.ts";
 
 export function SignUpForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  const username = useProfileStore((state) => state.data?.username)
+
+  const saveToken = useTokenStore((state) => state.saveToken);
+  const saveProfile = useProfileStore((state) => state.saveProfile);
+  const setError = useProfileStore((state) => state.setError);
+
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const setAccessToken = useAuthStore((state)=> state.setAccessToken);
-
-  const setUser = useUserStore((state)=> state.setUser);
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
     try {
-      const response = await RegisterUser(name, email, password)
-      if (response) {
-        toast.success("Successfully registered")
-
-        setAccessToken(response.accessToken)
-        if (response.user) {
-          setUser(response.user)
-        }
-      }
+      await registerProfile(name, email, password, saveToken, saveProfile, setError)
+      toast.success("Successfully registered" + "\nUsername: " + username)
     } catch (err) {
-      toast.error("Failed to register user")
+      const error = err as CustomError
+      toast.error("Registration failed: " + error.message)
     }
   }
 
@@ -43,7 +40,7 @@ export function SignUpForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden">
         <CardContent className="flex justify-center">
-          <form className="p-6 md:p-8" onSubmit={handleSubmit}>
+          <form className="p-6 md:p-8" onSubmit={onSubmit}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Welcome to SpeakUp</h1>

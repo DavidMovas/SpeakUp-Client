@@ -12,5 +12,5 @@ type User struct {
 	FullName  string `json:"fullName"`
 	AvatarURL string `json:"avatarUrl"`
 	Bio       string `json:"bio"`
-	CreateAt  string `json:"createAt"`
+	CreatedAt string `json:"createdAt"`
 }

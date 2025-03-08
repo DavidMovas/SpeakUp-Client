@@ -7,7 +7,7 @@ export namespace models {
 	    fullName: string;
 	    avatarUrl: string;
 	    bio: string;
-	    createAt: string;
+	    createdAt: string;
 	
 	    static createFrom(source: any = {}) {
 	        return new User(source);
@@ -21,7 +21,7 @@ export namespace models {
 	        this.fullName = source["fullName"];
 	        this.avatarUrl = source["avatarUrl"];
 	        this.bio = source["bio"];
-	        this.createAt = source["createAt"];
+	        this.createdAt = source["createdAt"];
 	    }
 	}
 	export class RegisterUserResponse {
