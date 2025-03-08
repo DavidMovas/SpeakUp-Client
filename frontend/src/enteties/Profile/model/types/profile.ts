@@ -5,15 +5,15 @@ export interface Profile {
     email: string
     username: string
     fullName: string
-    bio?: string
+    bio: string | null
     avatarUrl?: string
     createdAt: Date
 }
 
 export interface ProfileStore {
-    data?: Profile;
+    data: Profile | null;
     loading: boolean;
-    error?: CustomError;
+    error: CustomError | null;
     saveProfile: (profile: Profile) => void;
     setError: (error: CustomError) => void;
     reset: () => void;

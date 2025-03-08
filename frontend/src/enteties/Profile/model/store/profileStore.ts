@@ -1,14 +1,13 @@
 import { create } from 'zustand';
 import { ProfileStore } from "@/enteties/Profile/model/types/profile.ts";
 
-
 const useProfileStore = create<ProfileStore>((set) => ({
-    data: undefined,
+    data: null,
     loading: false,
-    error: undefined,
+    error: null,
     saveProfile: (profile)=> set({data: profile}),
     setError: (error) => set({error: error}),
-    reset: () => set({data: undefined, loading: false, error: undefined})
+    reset: () => set({data: null, loading: false, error: null})
 }))
 
 export default useProfileStore;

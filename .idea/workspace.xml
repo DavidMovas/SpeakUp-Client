@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="added zustand for sessions storing">
+    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Profile/model/service/loginProfile.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/enteties/Profile/model/service/registerProfile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/enteties/Profile/model/service/registerProfile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/enteties/Profile/model/store/profileStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/enteties/Profile/model/store/profileStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/enteties/Profile/model/types/profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/enteties/Profile/model/types/profile.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +131,8 @@
       <option name="presentableId" value="Default" />
       <updated>1741367140071</updated>
       <workItem from="1741367144194" duration="11413000" />
-      <workItem from="1741379232947" duration="27709000" />
+      <workItem from="1741379232947" duration="27755000" />
+      <workItem from="1741428298269" duration="7980000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -193,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741408043192</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated errors in signup form">
+      <option name="closed" value="true" />
+      <created>1741408425936</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741408425936</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +219,8 @@
     <MESSAGE value="added zustand for sessions storing" />
     <MESSAGE value="added sonner for events" />
     <MESSAGE value="added custom error, typed, slices for errors, token and profile, updated logic for registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="added custom error, typed, slices for errors, token and profile, updated logic for registration" />
+    <MESSAGE value="updated errors in signup form" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated errors in signup form" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

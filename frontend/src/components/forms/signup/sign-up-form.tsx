@@ -1,44 +1,39 @@
+import React, { useState } from "react";
 import { cn } from "@/lib/utils.ts"
 import { Button } from "@/components/ui/Button/button.tsx"
 import { Card, CardContent } from "@/components/ui/Card/card.tsx"
 import { Input } from "@/components/ui/Input/input.tsx"
 import { Label } from "@/components/ui/Label/label.tsx"
-import React, { useState } from "react";
-import { toast } from "sonner";
 import registerProfile from "@/enteties/Profile/model/service/registerProfile.ts";
-import useTokenStore from "@/enteties/Token/model/store/tokenStore.ts";
-import { Code, CustomError } from "@/enteties/Error/model/types/error.ts";
 import useProfileStore from "@/enteties/Profile/model/store/profileStore.ts";
+import useTokenStore from "@/enteties/Token/model/store/tokenStore.ts";
+import { toast } from "sonner";
+import { formatError } from "@/enteties/Error/model/slice/helpers.ts";
+import { Code } from "@/enteties/Error/model/types/error.ts";
 
 export function SignUpForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const username = useProfileStore((state) => state.data?.username)
-
-  const saveToken = useTokenStore((state) => state.saveToken);
   const saveProfile = useProfileStore((state) => state.saveProfile);
-  const setError = useProfileStore((state) => state.setError);
+  const saveToken = useTokenStore((state)=> state.saveToken);
 
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      await registerProfile(name, email, password, saveToken, saveProfile, setError)
-      toast.success("Successfully registered" + "\nUsername: " + username)
+      await registerProfile(name, email, password,saveProfile, saveToken)
+      toast.success("Registration successful")
     } catch (err) {
-      const error = err as CustomError
-      switch (error.code) {
-        case Code.ALREADY_EXISTS:
-         return  toast.error("User with the same email already exists")
-        case Code.INVALID_ARGUMENT:
-          return toast.error("Data is invalid")
-        default:
-          return toast.error("Server error")
+      const error = formatError(err as string)
+      if (error.code === Code.ALREADY_EXISTS) {
+        toast.error("User with the same email already exists")
+      } else {
+        toast.error(`Registration failed\n ${formatError(err as string).message}`)
       }
     }
   }
