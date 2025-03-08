@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { RegisterUser } from "../../../../wailsjs/go/handlers/UsersHandler";
 import useAuthStore from "@/store/authStore.ts";
 import useUserStore from "@/store/userStore.ts";
+import { toast } from "sonner";
 
 export function SignUpForm({
   className,
@@ -26,12 +27,15 @@ export function SignUpForm({
     try {
       const response = await RegisterUser(name, email, password)
       if (response) {
+        toast.success("Successfully registered")
+
         setAccessToken(response.accessToken)
         if (response.user) {
           setUser(response.user)
         }
       }
     } catch (err) {
+      toast.error("Failed to register user")
     }
   }
 

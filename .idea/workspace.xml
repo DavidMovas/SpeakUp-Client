@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="ui components replaced">
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/authStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/userStore.ts" afterDir="false" />
+    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="added zustand for sessions storing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/handlers/users.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/users.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/responses.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/responses.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json.md5" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/forms/login/login-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/sign-up-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/LoginPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SignupPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SignupPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/handlers/UsersHandler.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/handlers/UsersHandler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wailsjs/go/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wailsjs/go/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +22,8 @@
       <list>
         <option value="Go File" />
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -114,11 +107,11 @@
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\build\windows" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Sonner" />
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\forms\signup" />
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\forms\login" />
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Label" />
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Input" />
-      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Card" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -137,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741367140071</updated>
       <workItem from="1741367144194" duration="11413000" />
-      <workItem from="1741379232947" duration="12230000" />
+      <workItem from="1741379232947" duration="14174000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -179,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741386185579</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added zustand for sessions storing">
+      <option name="closed" value="true" />
+      <created>1741391879261</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741391879261</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +190,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="added Version component for displaying app version" />
     <MESSAGE value="ui components replaced" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui components replaced" />
+    <MESSAGE value="added zustand for sessions storing" />
+    <option name="LAST_COMMIT_MESSAGE" value="added zustand for sessions storing" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
