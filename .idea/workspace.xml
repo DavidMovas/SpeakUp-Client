@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="some adjustments, added user login logic">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MainPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/shared/grpc/v1/chat.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/shared/grpc/v1/chat.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/shared/grpc/v1/chat_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/shared/grpc/v1/chat_grpc.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/shared/grpc/v1/users.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/shared/grpc/v1/users.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json.md5" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +24,8 @@
       <list>
         <option value="CSS File" />
         <option value="Go File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -134,7 +138,7 @@
       <workItem from="1741379232947" duration="27755000" />
       <workItem from="1741428298269" duration="20003000" />
       <workItem from="1742155698170" duration="1143000" />
-      <workItem from="1742250148944" duration="1288000" />
+      <workItem from="1742250148944" duration="3459000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -240,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741450659068</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="proto generated files fetched">
+      <option name="closed" value="true" />
+      <created>1742251485911</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1742251485911</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +270,8 @@
     <MESSAGE value="some refactoring" />
     <MESSAGE value="added former-motion for animation between components and pages" />
     <MESSAGE value="some adjustments, added user login logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="some adjustments, added user login logic" />
+    <MESSAGE value="proto generated files fetched" />
+    <option name="LAST_COMMIT_MESSAGE" value="proto generated files fetched" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
