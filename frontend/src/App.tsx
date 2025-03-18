@@ -4,7 +4,7 @@ import { Version } from "@/components/ui/Version/Version.tsx";
 import { Toaster } from "sonner";
 import useThemeStore from "@/enteties/Theme/store/themeStore.ts";
 
-const version = "0.0.2-alpha"
+const version = "0.0.3-alpha"
 
 const AuthPage = lazy(() => import('./pages/AuthPage'))
 const MainPage = lazy(() => import('./pages/MainPage'))

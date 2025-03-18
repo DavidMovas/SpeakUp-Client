@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="some adjustments, added user login logic">
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MainPage.tsx" afterDir="false" />
+    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="added app sidebar for app, refactoring">
+      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Theme/ui/ThemeSwitch.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json.md5" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/app-sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/nav-user.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/nav-user.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/avatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/Avatar/avatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/use-mobile.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/MainPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,12 +45,12 @@
     &quot;assignee&quot;: &quot;DavidMovas&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/DavidMovas/SpeakUp-Client.git&quot;,
-    &quot;accountId&quot;: &quot;fd4bacbf-2c89-4c78-9f42-0918a025b829&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DavidMovas/SpeakUp-Client.git",
+    "accountId": "c074ee3a-7f9a-47dd-8659-c2f96323612b"
   }
-}</component>
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -111,18 +117,17 @@
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\build\windows" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Sonner" />
-      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\forms\signup" />
-      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\forms\login" />
-      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Label" />
+      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Switch" />
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Input" />
+      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Button" />
+      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Avatar" />
+      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Sonner" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-gosdk-d297c17c1fbd-57c114c3cede-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-243.25659.52" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-GO-243.25659.52" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
       </set>
     </attachedChunks>
   </component>
@@ -138,7 +143,8 @@
       <workItem from="1741379232947" duration="27755000" />
       <workItem from="1741428298269" duration="20003000" />
       <workItem from="1742155698170" duration="1143000" />
-      <workItem from="1742250148944" duration="3459000" />
+      <workItem from="1742250148944" duration="5441000" />
+      <workItem from="1742255839191" duration="2886000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -252,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742251485911</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added app sidebar for app, refactoring">
+      <option name="closed" value="true" />
+      <created>1742253925263</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1742253925263</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +285,8 @@
     <MESSAGE value="added former-motion for animation between components and pages" />
     <MESSAGE value="some adjustments, added user login logic" />
     <MESSAGE value="proto generated files fetched" />
-    <option name="LAST_COMMIT_MESSAGE" value="proto generated files fetched" />
+    <MESSAGE value="added app sidebar for app, refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="added app sidebar for app, refactoring" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
