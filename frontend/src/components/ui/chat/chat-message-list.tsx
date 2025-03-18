@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ArrowDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/shadcn/button";
 import { useAutoScroll } from "@/components/ui/chat/hooks/useAutoScroll";
 
 interface ChatMessageListProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -12,7 +12,6 @@ const ChatMessageList = React.forwardRef<HTMLDivElement, ChatMessageListProps>(
     const {
       scrollRef,
       isAtBottom,
-      autoScrollEnabled,
       scrollToBottom,
       disableAutoScroll,
     } = useAutoScroll({
