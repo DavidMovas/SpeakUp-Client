@@ -7,7 +7,6 @@ import useThemeStore from "@/enteties/Theme/store/themeStore.ts";
 const version = "0.0.3-alpha"
 
 const AuthPage = lazy(() => import('./pages/AuthPage'))
-const MainPage = lazy(() => import('./pages/MainPage'))
 
 function App() {
     const {isDark} = useThemeStore();
@@ -19,8 +18,7 @@ function App() {
                 <Toaster />
                 <Suspense fallback={<div>Loading...</div>}>
                     <Routes>
-                        <Route path="/auth" element={<AuthPage />}></Route>
-                        <Route path="/" element={<MainPage />}></Route>
+                        <Route path="/" element={<AuthPage />}></Route>
                     </Routes>
                 </Suspense>
             </HashRouter>

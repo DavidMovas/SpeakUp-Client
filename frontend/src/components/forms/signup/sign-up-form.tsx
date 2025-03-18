@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { cn } from "@/lib/utils.ts"
-import { Button } from "@/components/ui/Button/button.tsx"
-import { Card, CardContent } from "@/components/ui/Card/card.tsx"
-import { Input } from "@/components/ui/Input/input.tsx"
-import { Label } from "@/components/ui/Label/label.tsx"
+import { Button } from "@/components/ui/shadcn/button.tsx"
+import { Card, CardContent } from "@/components/ui/shadcn/card.tsx"
+import { Input } from "@/components/ui/shadcn/input.tsx"
+import { Label } from "@/components/ui/shadcn/label.tsx"
 import registerProfile from "@/enteties/Profile/model/service/registerProfile.ts";
 import useProfileStore from "@/enteties/Profile/model/store/profileStore.ts";
 import useTokenStore from "@/enteties/Token/model/store/tokenStore.ts";

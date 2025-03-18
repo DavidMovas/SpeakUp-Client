@@ -4,22 +4,22 @@ import * as React from "react"
 import { VariantProps, cva } from "class-variance-authority"
 import { PanelLeft } from "lucide-react"
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/Button/button.tsx"
-import { Input } from "@/components/ui/Input/input.tsx"
-import { Separator } from "@/components/ui/separator"
-import { Skeleton } from "@/components/ui/skeleton"
+import { cn } from "@/lib/utils.ts"
+import { Button } from "@/components/ui/shadcn/button.tsx"
+import { Input } from "@/components/ui/shadcn/input.tsx"
+import { Separator } from "@/components/ui/shadcn/separator.tsx"
+import { Skeleton } from "@/components/ui/shadcn/skeleton.tsx"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
+} from "@/components/ui/shadcn/tooltip.tsx"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
-const SIDEBAR_WIDTH = "16rem"
-const SIDEBAR_WIDTH_ICON = "3rem"
+const SIDEBAR_WIDTH = "22rem"
+const SIDEBAR_WIDTH_ICON = "3.5rem"
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
 
 type SidebarContextProps = {

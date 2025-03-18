@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils.ts"
-import { Button } from "@/components/ui/Button/button.tsx"
-import { Card, CardContent } from "@/components/ui/Card/card.tsx"
-import { Input } from "@/components/ui/Input/input.tsx"
-import { Label } from "@/components/ui/Label/label.tsx"
+import { Button } from "@/components/ui/shadcn/button.tsx"
+import { Card, CardContent } from "@/components/ui/shadcn/card.tsx"
+import { Input } from "@/components/ui/shadcn/input.tsx"
+import { Label } from "@/components/ui/shadcn/label.tsx"
 import React, { useState } from "react";
 import { AuthPageProps } from "@/pages/AuthPage.tsx";
 import { motion } from 'framer-motion';

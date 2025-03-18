@@ -1,6 +1,6 @@
 import React from "react";
 import useThemeStore from "@/enteties/Theme/store/themeStore.ts";
-import { Switch } from "@/components/ui/Switch/switch.tsx";
+import { Switch } from "@/components/ui/shadcn/switch.tsx";
 import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils.ts";
 

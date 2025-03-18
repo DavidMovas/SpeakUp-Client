@@ -4,21 +4,33 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="added app sidebar for app, refactoring">
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Theme/ui/ThemeSwitch.tsx" afterDir="false" />
+    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="added switch and textarea components, created theme switch component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json.md5" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/app-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/nav-user.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/nav-user.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/avatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/Avatar/avatar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/input.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/use-mobile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/app-sidebar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/login/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/forms/login/login-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/forms/signup/sign-up-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/nav-main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/nav-user.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/Avatar/avatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/avatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/Button/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/Card/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/Input/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/Label/label.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/label.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/Sonner/sonner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/sonner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/Switch/switch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/switch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/breadcrumb.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/breadcrumb.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/collapsible.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/collapsible.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/dropdown-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/separator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/separator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/sheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/sheet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/skeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/skeleton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/textarea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/tooltip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/tooltip.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/enteties/Theme/ui/ThemeSwitch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/enteties/Theme/ui/ThemeSwitch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/enteties/Theme/ui/ThemeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/enteties/Theme/ui/ThemeToggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MainPage.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,11 +129,11 @@
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\build\windows" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\shadcn" />
+      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui" />
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Switch" />
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Input" />
       <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Button" />
-      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Avatar" />
-      <recent name="C:\DICM\CodeBase\Golang\SpeakUp-Client\frontend\src\components\ui\Sonner" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -144,7 +156,7 @@
       <workItem from="1741428298269" duration="20003000" />
       <workItem from="1742155698170" duration="1143000" />
       <workItem from="1742250148944" duration="5441000" />
-      <workItem from="1742255839191" duration="2886000" />
+      <workItem from="1742255839191" duration="4283000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -266,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742253925263</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added switch and textarea components, created theme switch component">
+      <option name="closed" value="true" />
+      <created>1742259020535</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1742259020535</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +306,8 @@
     <MESSAGE value="some adjustments, added user login logic" />
     <MESSAGE value="proto generated files fetched" />
     <MESSAGE value="added app sidebar for app, refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="added app sidebar for app, refactoring" />
+    <MESSAGE value="added switch and textarea components, created theme switch component" />
+    <option name="LAST_COMMIT_MESSAGE" value="added switch and textarea components, created theme switch component" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
