@@ -22,7 +22,7 @@ const _ = grpc.SupportPackageIsVersion9
 
 const (
 	ChatService_CreateChat_FullMethodName     = "/chat.v1.ChatService/CreateChat"
-	ChatService_Connect_FullMethodName        = "/chat.v1.ChatService/Connect"
+	ChatService_Connect_FullMethodName        = "/chat.v1.ChatService/connect"
 	ChatService_GetChatHistory_FullMethodName = "/chat.v1.ChatService/GetChatHistory"
 )
 
@@ -97,7 +97,7 @@ func (UnimplementedChatServiceServer) CreateChat(context.Context, *CreateChatReq
 	return nil, status.Errorf(codes.Unimplemented, "method CreateChat not implemented")
 }
 func (UnimplementedChatServiceServer) Connect(grpc.BidiStreamingServer[ConnectRequest, ConnectResponse]) error {
-	return status.Errorf(codes.Unimplemented, "method Connect not implemented")
+	return status.Errorf(codes.Unimplemented, "method connect not implemented")
 }
 func (UnimplementedChatServiceServer) GetChatHistory(context.Context, *GetChatHistoryRequest) (*GetChatHistoryResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetChatHistory not implemented")
@@ -184,7 +184,7 @@ var ChatService_ServiceDesc = grpc.ServiceDesc{
 	},
 	Streams: []grpc.StreamDesc{
 		{
-			StreamName:    "Connect",
+			StreamName:    "connect",
 			Handler:       _ChatService_Connect_Handler,
 			ServerStreams: true,
 			ClientStreams: true,

@@ -844,10 +844,10 @@ var file_chat_proto_depIdxs = []int32{
 	4,  // 9: chat.v1.GetChatHistoryResponse.messages:type_name -> chat.v1.Message
 	11, // 10: chat.v1.ConnectRequest.JoinChat.last_read_at:type_name -> google.protobuf.Timestamp
 	0,  // 11: chat.v1.ChatService.CreateChat:input_type -> chat.v1.CreateChatRequest
-	2,  // 12: chat.v1.ChatService.Connect:input_type -> chat.v1.ConnectRequest
+	2,  // 12: chat.v1.ChatService.connect:input_type -> chat.v1.ConnectRequest
 	6,  // 13: chat.v1.ChatService.GetChatHistory:input_type -> chat.v1.GetChatHistoryRequest
 	1,  // 14: chat.v1.ChatService.CreateChat:output_type -> chat.v1.CreateChatResponse
-	3,  // 15: chat.v1.ChatService.Connect:output_type -> chat.v1.ConnectResponse
+	3,  // 15: chat.v1.ChatService.connect:output_type -> chat.v1.ConnectResponse
 	7,  // 16: chat.v1.ChatService.GetChatHistory:output_type -> chat.v1.GetChatHistoryResponse
 	14, // [14:17] is the sub-list for method output_type
 	11, // [11:14] is the sub-list for method input_type

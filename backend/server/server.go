@@ -13,6 +13,7 @@ import (
 
 type Server struct {
 	UsersHandler *handlers.UsersHandler
+	ChatsHandler *handlers.ChatsHandler
 	cfg          *config.Config
 	closers      []func() error
 }
@@ -28,11 +29,14 @@ func NewServer(_ context.Context, cfg *config.Config) (*Server, error) {
 	closers = append(closers, conn.Close)
 
 	usersClient := v1.NewUsersServiceClient(conn)
+	chatsClient := v1.NewChatServiceClient(conn)
 
 	usersHandler := handlers.NewUsersHandler(usersClient)
+	chatsHandler := handlers.NewChatsHandler(chatsClient)
 
 	return &Server{
 		UsersHandler: usersHandler,
+		ChatsHandler: chatsHandler,
 		cfg:          cfg,
 		closers:      closers,
 	}, nil

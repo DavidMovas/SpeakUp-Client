@@ -50,5 +50,7 @@ func (a *App) shutdown(ctx context.Context) {
 	// Perform your teardown here
 	a.ctx.Done()
 	ctx.Done()
+
+	a.server.ChatsHandler.Shutdown()
 	_ = a.server.Stop()
 }

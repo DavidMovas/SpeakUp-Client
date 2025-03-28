@@ -49,6 +49,7 @@ func main() {
 		Bind: []interface{}{
 			app,
 			app.server.UsersHandler,
+			app.server.ChatsHandler,
 		},
 		// Windows platform specific options
 		Windows: &windows.Options{
@@ -75,7 +76,7 @@ func main() {
 			WindowIsTranslucent:  true,
 			About: &mac.AboutInfo{
 				Title:   "SpeakUp",
-				Message: "",
+				Message: "Chat messenger",
 				Icon:    icon,
 			},
 		},

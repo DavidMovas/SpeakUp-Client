@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"context"
 	"github.com/DavidMovas/SpeakUp-Server/backend/models"
 	v1 "github.com/DavidMovas/SpeakUp-Server/backend/shared/grpc/v1"
+	"github.com/DavidMovas/SpeakUp-Server/backend/utils/ctxc"
 )
 
 type UsersHandler struct {
@@ -17,7 +17,7 @@ func NewUsersHandler(client v1.UsersServiceClient) *UsersHandler {
 }
 
 func (h *UsersHandler) RegisterUser(fullName, email, password string) (*models.RegisterUserResponse, error) {
-	response, err := h.client.Register(context.Background(), &v1.RegisterRequest{
+	response, err := h.client.Register(ctxc.ShortContext(), &v1.RegisterRequest{
 		FullName: fullName,
 		Email:    email,
 		Password: password,
@@ -42,7 +42,7 @@ func (h *UsersHandler) RegisterUser(fullName, email, password string) (*models.R
 }
 
 func (h *UsersHandler) LoginUser(email, password string) (*models.LoginUserResponse, error) {
-	response, err := h.client.Login(context.Background(), &v1.LoginRequest{
+	response, err := h.client.Login(ctxc.ShortContext(), &v1.LoginRequest{
 		Email:    email,
 		Password: password,
 	})

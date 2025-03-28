@@ -4,20 +4,18 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="refactored installed (third side components) replaced, added new chat components (ts)">
-      <change afterPath="$PROJECT_DIR$/frontend/src/enteties/Message/Message.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useChatStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" afterDir="false" />
+    <list default="true" id="74505f68-ad4d-4b0c-99c1-942fbf6432e4" name="Changes" comment="added chat ui">
+      <change afterPath="$PROJECT_DIR$/backend/handlers/chats.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/utils/ctxc/context.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json.md5" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json.md5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/shadcn/textarea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/chat/chat-bubble.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/chat/chat-bubble.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/chat/chat-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/chat/chat-input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/chat/chat-message-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/chat/chat-message-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/chat/expandable-chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/chat/expandable-chat.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/chat/hooks/useAutoScroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/chat/hooks/useAutoScroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/chat/message-loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ui/chat/message-loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/handlers/users.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/users.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/responses.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/shared/grpc/v1/chat.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/shared/grpc/v1/chat.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/shared/grpc/v1/chat_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/shared/grpc/v1/chat_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +26,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Go File" />
         <option value="TypeScript JSX File" />
         <option value="Create React Componet.tsx.child.0" />
         <option value="Create React Componet" />
         <option value="TypeScript File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -46,12 +44,12 @@
     &quot;assignee&quot;: &quot;DavidMovas&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/DavidMovas/SpeakUp-Client.git",
-    "accountId": "c074ee3a-7f9a-47dd-8659-c2f96323612b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DavidMovas/SpeakUp-Client.git&quot;,
+    &quot;accountId&quot;: &quot;fd4bacbf-2c89-4c78-9f42-0918a025b829&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -128,7 +126,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
+        <option value="bundled-gosdk-d297c17c1fbd-57c114c3cede-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-243.25659.52" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-GO-243.25659.52" />
       </set>
     </attachedChunks>
   </component>
@@ -145,7 +144,8 @@
       <workItem from="1741428298269" duration="20003000" />
       <workItem from="1742155698170" duration="1143000" />
       <workItem from="1742250148944" duration="5441000" />
-      <workItem from="1742255839191" duration="12361000" />
+      <workItem from="1742255839191" duration="12432000" />
+      <workItem from="1743195341941" duration="3121000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -283,11 +283,28 @@
       <option name="project" value="LOCAL" />
       <updated>1742260420107</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added chat ui">
+      <option name="closed" value="true" />
+      <created>1742268258314</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1742268258314</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="javascript:npm:react" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:tailwindcss" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:vite" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="executable:terraform" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:postcss" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
@@ -305,7 +322,8 @@
     <MESSAGE value="added app sidebar for app, refactoring" />
     <MESSAGE value="added switch and textarea components, created theme switch component" />
     <MESSAGE value="refactored installed (third side components) replaced, added new chat components (ts)" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored installed (third side components) replaced, added new chat components (ts)" />
+    <MESSAGE value="added chat ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="added chat ui" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

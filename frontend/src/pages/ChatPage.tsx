@@ -8,12 +8,15 @@ import { Paperclip, Send } from "lucide-react";
 import { ChatInput } from "@/components/ui/chat/chat-input.tsx";
 import useChatStore from "@/hooks/useChatStore.ts";
 import Message from "@/enteties/Message/Message.ts";
+import useProfileStore from "@/enteties/Profile/model/store/profileStore.ts";
 
 const MeID = "user_1";
 
 const ChatPage: React.FC = () => {
     const messagesRef = useRef<HTMLDivElement>(null);
     const formRef = useRef<HTMLFormElement>(null);
+
+    const meID = useProfileStore((state) =>  state.data?.id);
 
     const {messages, addMessage}  = useChatStore();
     const [message, setMessage] = useState("");
@@ -37,14 +40,17 @@ const ChatPage: React.FC = () => {
     };
 
     const handleSend = () => {
-        const newMessage: Message = {
-            id: message.length.toString(),
-            chatId: "chat_1",
-            senderId: "user_1",
-            message: message.trim(),
-            timestamp: new Date(),
-        };
-        sendMessage(newMessage);
+        if (meID) {
+            const newMessage: Message = {
+                id: message.length.toString(),
+                chatId: "chat_1",
+                senderId: meID,
+                message: message.trim(),
+                timestamp: new Date(),
+            };
+
+            sendMessage(newMessage);
+        }
 
         setInput("");
         setMessage("");
